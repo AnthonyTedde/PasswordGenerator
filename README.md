@@ -51,3 +51,20 @@ converting an array into string. It can take param:
 
 1. __separator__ (by default empty string)
 
+### Param minitest from Rakefile
+
+With [TestTask](http://ruby-doc.org//stdlib-2.0/libdoc/rake/rdoc/Rake/TestTask.html)
+it is possible to customize the call of `rake` according to some attributes:
+
+```ruby
+# Inside Rakefile
+require 'rake/testtask'
+
+# "rake" by default will play "rake test"
+task default: :test
+
+Rake::TestTask.new do |t|
+    t.pattern = "test/*_test.rb"
+    t.verbose = true
+end
+```
