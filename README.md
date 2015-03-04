@@ -2,7 +2,7 @@
 
 ## Summary
 
-Subjet of this course is to create a password generator.
+Subjet of this course is to create a password generator
 
 ## Tips
 
